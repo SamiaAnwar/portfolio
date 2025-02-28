@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
 *{
-  font-family: Outfit;
+  font-family: Outfit, sans-serif;
+}
+
+.fancy{
+  font-family: Ovo, serif;
+}
+
+.darkMode{
+  background-color: black;
 }
