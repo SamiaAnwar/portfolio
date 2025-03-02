@@ -15,10 +15,15 @@ export const close = {
 };
 
 export const profile = {
-    src: "/headshot.jpeg"
+    src: "/headshot3.jpeg"
 };
 
 export const resume = {
     file: "/SamiaAnwarResume.pdf",
     img: "/download.svg"
 };
+
+export const logos = {
+    github: "/github_logo.svg",
+    linkedin: "/linkedin_logo.svg"
+}
