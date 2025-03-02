@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { profile, resume } from '@/app/assets'; 
+import { profile, resume, logos } from '@/app/assets'; 
 import { relative } from "path";
 
 export const Header=() => {
@@ -34,6 +34,23 @@ export const Header=() => {
                         </div>
                     </a>
                 </div>
+                <div className="align-middle">
+                    <a href="https://github.com/SamiaAnwar" rel="noopener noreferrer" target="_blank" className="px-3 py-3">
+                        <div className="inline-block items-center align-middle">
+                            <Image src={logos.github} alt="download"
+                            width={50} height={50}/>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/samia-anwar/" rel="noopener noreferrer" target="_blank" className="px-3 py-3">
+                        <div className="inline-block items-center align-middle">
+                            <Image src={logos.linkedin} alt="download"
+                            width={60} height={60}/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div className="flex sm:flex-row h-100% w-100% col-span-2">
+                <Image src={profile.src} alt="headshot" width={1666} height={2222} className="rounded-lg"/>
             </div>
         </div>
     )
