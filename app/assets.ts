@@ -13,3 +13,12 @@ export const menuIcon = {
 export const close = {
     src: "/close.svg"
 };
+
+export const profile = {
+    src: "/headshot.jpeg"
+};
+
+export const resume = {
+    file: "/SamiaAnwarResume.pdf",
+    img: "/download.svg"
+};
