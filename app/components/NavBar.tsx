@@ -1,8 +1,9 @@
-import React, { createRef, useRef } from "react";
+import React, { createRef, useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { logo, darkModeIcon, menuIcon, close} from '@/app/assets'; 
 
 export const NavBar = () => {
+    const [isScroll, setIsScroll] = useState<Boolean>(false); 
     const sideMenuRef = useRef<HTMLInputElement>(null); 
     const openMenu = () => {
         if (sideMenuRef.current) {
@@ -14,6 +15,16 @@ export const NavBar = () => {
             sideMenuRef.current.style.transform = 'translateX(16rem)'; 
         }     
     }
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (scrollY > 50) {
+                setIsScroll(true)
+            } else {
+                setIsScroll(false)
+            }
+        })
+    }, [])
     return (
         <>
             <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
@@ -22,7 +33,7 @@ export const NavBar = () => {
                         <Image src={logo.src} alt="sunflower logo" fill className='!relative'/>
                     </a>
                 </div>
-                <ul className="hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+                <ul className={`hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "bg-opacity-25 backdrop-blur-lg shadow-sm": ""}`}>
                     <li ><a className="fancy" href="#top"> samia&lt;3 </a></li>
                     <li><a className="fancy" href="#about"> about </a></li>
                     <li><a className="fancy" href="#projects"> projects </a></li>
