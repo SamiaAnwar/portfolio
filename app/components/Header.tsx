@@ -5,12 +5,15 @@ import { relative } from "path";
 
 export const Header=() => {
     return (
-        <div className="w-12/13 max-w-3xl mx-auto h-screen flex flex-col flex-row items-center justify-center gap-4 grid grid-cols-5">
-            <div className="col-span-3">
+        <div className=" relative w-12/13 max-w-3xl mx-auto h-screen  items-center justify-center justify-between gap-4 grid grid-cols-1 sm:grid-cols-5">
+             <div className="flex items-start xs:py-100 xs:mt-100 justify-center sm:hidden">
+                <Image src={profile.src} alt="headshot" width={1666} height={2222} className="rounded-full sm:rounded-lg w-64 h-auto"/>
+            </div>
+            <div className="col-span-3 flex flex-col items-center sm:items-start">
                 <h1 className="text-3xl sm:text-6xl lg:text-[66px] mb-5 fancy">
                     samia anwar 
                 </h1>
-                <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 fancy">
+                <h3 className="flex text-center sm:text-left gap-2 text-xl md:text-2xl mb-3 fancy">
                 software engineer with experience in full stack web dev and machine learning research
                 </h3>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 mb-5">
@@ -40,8 +43,8 @@ export const Header=() => {
                     </a>
                 </div>
             </div>
-            <div className="flex sm:flex-row h-100% w-100% col-span-2">
-                <Image src={profile.src} alt="headshot" width={1666} height={2222} className="rounded-lg"/>
+            <div className="flex justify-center hidden sm:block sm:justify-end col-span-2">
+                <Image src={profile.src} alt="headshot" width={1666} height={2222} className="rounded-full sm:rounded-lg w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 h-auto"/>
             </div>
             
         </div>
