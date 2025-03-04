@@ -5,12 +5,12 @@ import next from "next";
 
 export const About = () => {
     return (
-        <div id="about" className=" relative w-full px-[12%] py-10">
+        <div id="about" className="relative w-full px-[12%] py-10 sm:mt-5 mt-20">
             <h4 className="text-center mb-2 text-lg fancy"> Introduction </h4>
             <h2 className=" text-center text-5xl fancy"> About Me </h2>
-            <div className="flex w-full flex-col lg:flex-row items-center gap-10 my-20">
-                <div className="flex justify-center sm:flex-row h-100% w-100% items-center">
-                    <Image src={about.grad} alt="headshot" width={300} height={450} className="rounded-lg w-50 sm:w-70 lg:w-70 xl:w-80 h-auto"/>
+            <div className="flex w-full flex-col lg:flex-row items-center gap-5 my-10">
+                <div className="flex justify-center lg:flex-row h-100% w-100% items-center">
+                    <Image src={about.grad} alt="headshot" width={300} height={450} className="rounded-lg w-50 sm:w-70 lg:w-80 xl:w-85 h-auto"/>
                 </div>
                 <div className="flex-1 text-lg">
                     <ul className="mb-10 max-w-2xl">

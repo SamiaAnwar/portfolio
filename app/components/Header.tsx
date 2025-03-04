@@ -5,8 +5,8 @@ import { relative } from "path";
 
 export const Header=() => {
     return (
-        <div className=" relative w-12/13 max-w-3xl mx-auto h-screen  items-center justify-center justify-between gap-4 grid grid-cols-1 sm:grid-cols-5">
-             <div className="flex items-start xs:py-100 xs:mt-100 justify-center sm:hidden">
+        <div className=" relative w-12/13 max-w-3xl mx-auto h-screen  items-center justify-center justify-between gap-4 grid grid-cols-1 sm:grid-cols-5 pt-20">
+             <div className="flex items-start justify-center sm:hidden">
                 <Image src={profile.src} alt="headshot" width={1666} height={2222} className="rounded-full sm:rounded-lg w-64 h-auto"/>
             </div>
             <div className="col-span-3 flex flex-col items-center sm:items-start">
