@@ -52,23 +52,23 @@ export const techStack = {
 export const projects = [
     {
         name: 'My Health Pal',
-        desc: 'As a part of my capstone project, I created an end-to-end web application to help families track their healthcare appointments with live user authentication.',
+        desc: 'I created an end-to-end web application to help families track their healthcare appointments with live user authentication.',
         src: '/myhealthpal.png',
         link: 'https://docs.google.com/presentation/d/1zJ5XNRF-AXiS6I4aMblWQ49aDNDh00HG/edit?usp=sharing&ouid=111583658904153071317&rtpof=true&sd=true',
         tags: ['GraphQL', 'DynamoDB', 'Systems Design', 'React.js', 'Node.js']
     },
     {
         name: 'Trading Simulator',
-        desc: 'To exercise my coding skills, I trained a Random Forest Regressor to make 30-day predictions from daily stock market closing and simulate trades. It is deployed as a live site to visualise current performance of the decisions model.',
-        src: '/tradesim',
-        link: 'https://samiaanwar.github.io/trading-simulator/',
-        tags: ['Machine Learning', 'scikit-learn', 'Flask', 'React.js', 'TailwindCSS', 'Google Cloud Run', 'Docker']
+        desc: 'I trained a Random Forest Regressor to make 30-day predictions from daily stock market closing and simulate trades. It is deployed as a live site to visualise current performance of the decisions model.',
+        src: '/tradeSim.png',
+        link: 'https://github.com/SamiaAnwar/trading-simulator',
+        tags: ['Machine Learning', 'RESTful API', 'Flask', 'React.js', 'TailwindCSS', 'Google Cloud Run', 'Docker']
     },
     {
         name: 'matisse',
-        desc: '',
-        src: '/matisse',
-        link: '',
+        desc: 'A Javascript library for front-end developers to quickly switch between colourspaces such as RGB and CMYK. This was tested using JUnit and published as an npm library.',
+        src: '/NPM.png',
+        link: 'https://www.npmjs.com/package/matisse',
         tags: ['npm', 'JavaScript', 'JUnit'],
     }
 ]
