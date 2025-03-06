@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 import { About } from "./components/About";
 import { TechStack } from "./components/TechStack";
 import { Projects } from "./components/Projects";
-
+import { Experiences } from "./components/Experiences";
 export default function Home() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function Home() {
       <About />
       <TechStack />
       <Projects /> 
+      <Experiences /> 
     </>
   );
 }
