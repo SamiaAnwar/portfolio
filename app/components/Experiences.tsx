@@ -27,7 +27,7 @@ export const Experiences = () => {
                                 <Image src={experience.src} alt={experience.comp} width={300} height={200} className="rounded-full w-16 h-16 shadow-md border-4 border-white" />
                             </div>
                         </div>
-                        <div className="flex flex-col items-center justify-center pt-12 text-center">
+                        <div className="flex flex-col items-center justify-center pt-12 text-center px-3">
                             <p className="text-md break-words leading-snug">{experience.role}</p>
                             <p className="text-md break-words leading-snug">{experience.date}</p>
                         </div>
