@@ -1,9 +1,11 @@
 export const logo = {
-    src: "/sunflower.png"
+    light: "/sunflower.png",
+    dark: "/rose.png"
 };
 
 export const darkModeIcon = {
-    src: "/moon.svg"
+    dark: "/moon.svg", 
+    light: "/sun.svg"
 };
 
 export const menuIcon = {

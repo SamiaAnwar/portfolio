@@ -3,7 +3,11 @@ import Image from "next/image";
 import { profile, resume, logos } from '@/app/assets'; 
 import { relative } from "path";
 
-export const Header=() => {
+type Props = {
+    isDarkMode: boolean; 
+}
+
+export const Header=({isDarkMode}:Props) => {
     return (
         <div className=" relative w-12/13 max-w-3xl mx-auto h-screen  items-center justify-center justify-between gap-4 grid grid-cols-1 sm:grid-cols-5 pt-20">
              <div className="flex items-start justify-center sm:hidden">
@@ -17,14 +21,14 @@ export const Header=() => {
                 software engineer with experience in full stack web dev and machine learning research
                 </h3>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 mb-5">
-                    <a href="#contact" className=" px-10 py-3 border rounded-full bg-black flex items-center gap-2 text-white">
+                    <a href="#contact" className={`px-10 py-3 border rounded-full flex items-center gap-2 ${isDarkMode ? "text-black bg-white" : "text-white bg-black"}`}>
                         contact me
                     </a>
-                    <a href={resume.file} download={true} className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2">
+                    <a href={resume.file} download={true} className={"px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"}>
                         my resume
                         <div className="inline-block items-center">
                             <Image src={resume.img} alt="download"
-                            width={25} height={25}/>
+                                width={25} height={25} className={isDarkMode ? "invert": ""} />
                         </div>
                     </a>
                 </div>
@@ -32,13 +36,13 @@ export const Header=() => {
                     <a href="https://github.com/SamiaAnwar" rel="noopener noreferrer" target="_blank" className="px-3 py-3">
                         <div className="inline-block items-center align-middle">
                             <Image src={logos.github} alt="download"
-                            width={50} height={50}/>
+                            width={50} height={50} className={isDarkMode ? "invert": ""} />
                         </div>
                     </a>
                     <a href="https://www.linkedin.com/in/samia-anwar/" rel="noopener noreferrer" target="_blank" className="px-3 py-3">
                         <div className="inline-block items-center align-middle">
                             <Image src={logos.linkedin} alt="download"
-                            width={60} height={60}/>
+                            width={60} height={60} className={isDarkMode ? "invert": ""} />
                         </div>
                     </a>
                 </div>

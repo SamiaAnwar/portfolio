@@ -12,7 +12,10 @@ import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export const TechStack = () => {
+type Props = {
+    isDarkMode: boolean; 
+}
+export const TechStack = ({isDarkMode}: Props) => {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
@@ -43,7 +46,7 @@ export const TechStack = () => {
                 opts={{ loop: true }}>
                 <CarouselContent>
                     <CarouselItem key={1} className='flex justify-center items-center lg:basis-6/32'>
-                        <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
+                        <div className={`${isDarkMode ? "bg-black shadow-md shadow-teal-600 border-teal-600": "bg-white shadow-sm border-slate-200"} relative flex flex-col my-6 border rounded-lg`}>
                             <div className="m-4 rounded-full bg-teal-600 py-0.5 px-1 border border-transparent text-xs text-white transition-all shadow-sm w-23 text-center ">LANGUAGES</div>
                             <div className=" m-4 p-2 flex gap-5">
                                 <div className=" inline-block  items-center mb-5">
@@ -58,7 +61,7 @@ export const TechStack = () => {
                         </div>
                     </CarouselItem>
                     <CarouselItem key={2} className='flex justify-center items-center lg:basis-9/32'>
-                        <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
+                        <div className={`${isDarkMode ? "bg-black shadow-md shadow-red-500 border-pink-600": "bg-white shadow-sm border-slate-200"} relative flex flex-col my-6 border rounded-lg`}>
                             <div className="m-4 rounded-full bg-pink-600 py-0.5 px-1 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">FRONTEND</div>
                             <div className=" m-4 p-2 flex gap-5">
                                 <div className=" inline-block  gap-10 items-center mb-5">
@@ -77,11 +80,11 @@ export const TechStack = () => {
                         </div>
                     </CarouselItem>
                 <CarouselItem key={3} className='flex justify-center items-center lg:basis-17/32'>
-                    <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
+                    <div className={`${isDarkMode ? "bg-black shadow-md shadow-purple-600 border-purple-600": "bg-white shadow-sm border-slate-200"} relative flex flex-col my-6 border rounded-lg`}>
                         <div className="m-4 rounded-full bg-purple-600 py-0.5 px-1 border border-transparent text-xs text-white transition-all shadow-sm w-20 text-center">BACKEND</div>
                         <div className=" m-4 p-2 flex gap-5">
                             <div className=" inline-block  items-center mb-5">
-                                <Image src={techStack.flask} alt="tech" width={300} height={450} className="rounded-lg w-10 h-auto inline-block" />
+                                <Image src={techStack.flask} alt="tech" width={300} height={450} className={`${isDarkMode ? "invert": ""} rounded-lg w-10 h-auto inline-block`} />
                                 <p className="relative text-xs">Flask</p>
                             </div>
                             <div className=" inline-block  items-center mb-5">
