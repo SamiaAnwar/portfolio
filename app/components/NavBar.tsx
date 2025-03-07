@@ -32,7 +32,7 @@ export const NavBar = (props: Props) => {
     }, [])
     return (
         <>
-            <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+            <nav className={"w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"}>
                 <div className='relative h-12 w-12 cursor-pointer mr-14'> 
                     <a href="#top">
                         <Image src={isDarkMode ? logo.dark : logo.light } alt="sunflower logo" fill className='!relative'/>
@@ -47,13 +47,13 @@ export const NavBar = (props: Props) => {
                 </ul>
 
 
-                <div className='flex items-center gap-4'>
+                <div className={'flex items-center gap-4'}>
                     
                     <button onClick={ handleSetDark }>
-                        <Image src={isDarkMode ? darkModeIcon.light : darkModeIcon.dark} alt={"moon"} width={300} height={200} className="w-9 h-9" />
+                        <Image src={isDarkMode ? darkModeIcon.light : darkModeIcon.dark} alt={"moon"} width={300} height={200} className="w-9 h-9" placeholder={ isScroll ? "blur": "empty"} blurDataURL={isDarkMode ? darkModeIcon.light : darkModeIcon.dark}/>
                     </button>
                     
-                    <a href="#contact" className="fancy hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"> contact </a>
+                    <a href="#contact" className={`${isScroll ? "backdrop-blur-lg shadow-sm": ""} fancy hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4`}> contact </a>
                     <button onClick={ openMenu }className="h-9 w-9 block md:hidden ml-3">
                         <Image src={ menuIcon.src } alt="menu icon" fill className={`!relative ${isDarkMode ? "invert" : ""}`}/>
                     </button>
