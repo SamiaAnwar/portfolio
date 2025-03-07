@@ -11,7 +11,7 @@ export const About = () => {
                 </div> */}
                 <div className="flex-1 text-lg">
                     <ul className="mb-10">
-                        <li className="fancy">&#128214; I&#39;m a November 2024 graduate from the Software and Biomedical Engineering program from McMaster University. 
+                        <li className="fancy">&#129504; I&#39;m a software engineer with research experience in applications of machine learning in healthcare. I recently graduated from the Software and Biomedical Engineering program from McMaster University. 
                         </li>
                         <li className="fancy"> &#128187; Currently, I&#39;m honing my skills in full stack development, keep scrolling to learn about the projects I&#39;ve worked on!  </li>
                         <li className="fancy"> &#128640; I&#39;m looking for full-time roles where I can apply my skills to create powerful software products. </li>
