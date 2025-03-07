@@ -10,7 +10,7 @@ export const Projects = ({isDarkMode}: Props) => {
     return (
         <div id="projects" className="container mx-auto px-4">
             <h2 className="text-center text-5xl fancy mt-10 mb-5"> My Projects</h2>
-            <h4 className="text-center mb-2 text-lg fancy mb-10"> I'm always working on a software project. Pssst...You're scrolling through one right now! This website was built using React.js with a Next.js framework using TypeScript. </h4>
+            <h4 className="text-center mb-2 text-lg fancy mb-10"> I&#39;m always working on a software project. Pssst...You&#39;re scrolling through one right now! This website was built using React.js with a Next.js framework using TypeScript. </h4>
             <div className="flex flex-wrap justify-center gap-6">
                 {projects.map((project, index) => (
                     <div 

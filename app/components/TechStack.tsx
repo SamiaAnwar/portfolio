@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { techStack } from "../assets";
 import { Carousel,
@@ -8,17 +8,14 @@ import { Carousel,
     CarouselPrevious,
     type CarouselApi
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Props = {
     isDarkMode: boolean; 
 }
 export const TechStack = ({isDarkMode}: Props) => {
     const [api, setApi] = useState<CarouselApi>()
-    const [current, setCurrent] = useState(0)
-    const [count, setCount] = useState(0)
+    
     const plugin = React.useRef(
         Autoplay({ delay: 2000, stopOnInteraction: true })
     )
@@ -26,16 +23,8 @@ export const TechStack = ({isDarkMode}: Props) => {
         if (!api) {
             return 
         }
-        setCount(api.scrollSnapList().length)
-        setCurrent(api.selectedScrollSnap() + 1)
-
-        api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1)
-        })
     }, [api])
-    const scrollToIndex = (index: number) => {
-        api?.scrollTo(index);
-    };
+
     return (
         <div className="relative h-96 max-h-[500px] px-5 mx-auto mt-5 max-w-7xl lg:mt-6">
             <Carousel className="flex w-full items-center justify-center -mt-20 mb-20 text-center gap-5 z-10"

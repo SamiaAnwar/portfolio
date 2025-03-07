@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { experiences } from "../assets";
-import exp from "constants";
 import { SquareArrowOutUpRight } from "lucide-react"; 
 type Props = {
     isDarkMode: boolean; 
@@ -16,7 +15,7 @@ export const Experiences = ({isDarkMode}: Props) => {
     return (
         <div id="experiences" className="container mx-auto px-4 pt-20">
             <h2 className="text-center text-5xl fancy mt-10 mb-5">My Experience</h2>
-            <h4 className="text-center mb-2 text-lg fancy mb-10"> I've worked at three internship and part-time roles in technology throughout my undergraduate degree. Read all about them here!  </h4>
+            <h4 className="text-center mb-2 text-lg fancy mb-10"> I&#39;ve worked at three internship and part-time roles in technology throughout my undergraduate degree. Read all about them here!  </h4>
             <div className="flex flex-wrap justify-center gap-6 ">
                 {experiences.map((experience, index) => (
                     <div key={index} 

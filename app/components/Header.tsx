@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { profile, resume, logos } from '@/app/assets'; 
-import { relative } from "path";
 
 type Props = {
     isDarkMode: boolean; 

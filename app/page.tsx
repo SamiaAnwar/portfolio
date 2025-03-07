@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import { NavBar } from "./components/NavBar";
 import { Header } from "./components/Header"; 
 import { About } from "./components/About";
@@ -7,7 +6,6 @@ import { TechStack } from "./components/TechStack";
 import { Projects } from "./components/Projects";
 import { Experiences } from "./components/Experiences";
 import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
 import { useEffect, useState } from "react";
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false); 
@@ -45,7 +43,7 @@ export default function Home() {
       <TechStack isDarkMode={ isDarkMode }/>
       <Projects isDarkMode={ isDarkMode }/> 
       <Experiences isDarkMode={ isDarkMode }/> 
-      <Contact isDarkMode={ isDarkMode }/> 
+      <Contact/> 
     </>
   );
 }

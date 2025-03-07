@@ -1,10 +1,7 @@
 import React, { useState, FormEvent } from "react";
 import { Send } from 'lucide-react';
 
-type Props = {
-    isDarkMode: boolean; 
-}
-export const Contact = ({isDarkMode}: Props) => {
+export const Contact = () => {
     const [result, setResult] = useState(""); 
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault(); 
@@ -38,7 +35,7 @@ export const Contact = ({isDarkMode}: Props) => {
             <h2 className="text-center text-lg fancy my-10">Contact Me</h2>
             <h4 className="text-center text-5xl fancy"> Get in touch! </h4>
             <p className="text-center max-w-2xl mx-auto mt-5 mb-12 fancy">
-                I'd love to hear from you! If you have any questions, comment or feedback, please use the form below &#128522; 
+                I&#39;d love to hear from you! If you have any questions, comment or feedback, please use the form below &#128522; 
             </p>
             <form onSubmit={ handleSubmit } className="max-w-2xl mx-auto">
                 <div className="grid grid-cols-2 gap-6 mt-10 mb-8">

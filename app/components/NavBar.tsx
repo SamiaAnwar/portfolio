@@ -1,7 +1,6 @@
-import React, { createRef, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { logo, darkModeIcon, menuIcon, close} from '@/app/assets'; 
-import { Sun } from 'lucide-react';
 
 type Props = {
     isDarkMode: boolean; 
@@ -10,7 +9,7 @@ type Props = {
 
 export const NavBar = (props: Props) => {
     const { isDarkMode, handleSetDark } = props; 
-    const [isScroll, setIsScroll] = useState<Boolean>(false); 
+    const [isScroll, setIsScroll] = useState<boolean>(false); 
     const sideMenuRef = useRef<HTMLInputElement>(null); 
     const openMenu = () => {
         if (sideMenuRef.current) {
