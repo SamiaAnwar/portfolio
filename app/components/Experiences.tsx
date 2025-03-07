@@ -3,23 +3,26 @@ import Image from "next/image";
 import { experiences } from "../assets";
 import exp from "constants";
 import { SquareArrowOutUpRight } from "lucide-react"; 
+type Props = {
+    isDarkMode: boolean; 
+}
 
-
-export const Experiences = () => {
-    const bgColors: { [key: string]: string } = {
-        "teal": "bg-teal-900",
-        "yellow": "bg-yellow-600",
-        "purple": "bg-purple-900",
+export const Experiences = ({isDarkMode}: Props) => {
+    const colors: { [key: string]: [string, string] } = {
+        "teal": ["bg-teal-900", "shadow-teal-900"],
+        "yellow": ["bg-yellow-600", "shadow-yellow-600" ],
+        "purple":[ "bg-purple-900", "shadow-purple-900" ],
     };
     return (
         <div id="experiences" className="container mx-auto px-4 pt-20">
-            <h2 className="text-center text-5xl fancy my-10">My Experience</h2>
+            <h2 className="text-center text-5xl fancy mt-10 mb-5">My Experience</h2>
+            <h4 className="text-center mb-2 text-lg fancy mb-10"> I've worked at three internship and part-time roles in technology throughout my undergraduate degree. Read all about them here!  </h4>
             <div className="flex flex-wrap justify-center gap-6 ">
                 {experiences.map((experience, index) => (
                     <div key={index} 
-                        className="relative flex flex-col w-[300px] md:w-[350px] lg:w-[400px] shadow-md border border-slate-200 rounded-lg hover:box-shadow">
+                        className={`${isDarkMode ? colors[experience.bg][1] : "border-slate-200"} relative flex flex-col w-[300px] md:w-[350px] lg:w-[400px] shadow-md border rounded-lg hover:box-shadow`}>
                         <div className={`relative flex fill items-center justify-center p-10 rounded-t-lg
-                            ${bgColors[experience.bg] || "bg-gray-200"}`}>
+                            ${colors[experience.bg][0] || "bg-gray-200"}`}>
                             
                             <h5 className="text-lg text-white">{experience.comp}</h5>
                         
@@ -35,7 +38,7 @@ export const Experiences = () => {
                             <p className="text-sm break-words">{experience.desc}</p>
                             {(experience.link !== undefined) ? (
                                 <a href={experience.link} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-3">
-                                    <SquareArrowOutUpRight className="w-5 h-5 text-gray-600 hover:text-black" />
+                                    <SquareArrowOutUpRight className={`${isDarkMode ? "text-white hover:text-gray-400" : "text-gray-600 hover:text-black"} w-5 h-5`} />
                                     Publication
                                 </a>
                             ):<div></div>}
