@@ -38,7 +38,7 @@ export const techStack = {
     aws: '/aws.svg',
     docker: '/docker.svg',
     figma: '/figma.svg',
-    flask: '/flask.svg',
+    flask: '/Flask.svg',
     gcr: '/google-cloud-run.svg',
     js: '/javascript.svg',
     nextjs: '/nextjs.svg',
