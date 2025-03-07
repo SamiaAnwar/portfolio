@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import { about, techStack } from "@/app/assets"; 
-import next from "next";
 
 export const About = () => {
     return (
