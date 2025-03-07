@@ -89,7 +89,7 @@ export const experiences = [
         comp: "Llettonna Foundation",
         role: "Project Manager",
         date: 'Feb 2020 - Jul 2021',
-        desc: "I co-led the development of a deep neural network to classify infanct facial patterns which resulted in a published paper. I also trained a classification model to predict the outcome of in-person vs. online psychiatric therapy.",
+        desc: "I co-led the development of a deep neural network to classify infant facial patterns which resulted in a published paper. I also trained a classification model to predict the outcome of in-person vs. online psychiatric therapy.",
         src: "/llettonna_logo.jpg",
         tags: ['Machine Learning', 'Project Management', 'Data Cleaning', 'Publication'],
         bg: 'purple',
